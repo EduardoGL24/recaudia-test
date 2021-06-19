@@ -1,1 +1,84 @@
-<p>user-list works!</p>
+<div class="users-main-container">
+  <section class="users-bar-container row">
+    <div class="col-lg-6">
+      <div class="bar-info-persons">
+        <p>Total de personas</p><label>{{users.total}}</label>
+      </div>
+      <div class="bar-info-persons">
+        <p>Nuevos</p><label>10</label>
+      </div>
+    </div>
+    <div class="col-lg-6 text-right">
+      <button><i class="fas fa-download"></i></button>
+      <button>
+        <i class="far fa-comment-dots mr-2"></i>
+        <i class="fas fa-caret-down"></i>
+      </button>
+      <button>
+        <i class="fas fa-cog mr-2"></i>
+        <i class="fas fa-caret-down"></i>
+      </button>
+    </div>
+  </section>
+  <section class="users-table-container">
+    <table class="table table-striped text-center">
+      <thead>
+        <tr>
+          <th scope="col">
+            <i class="fas fa-flag"></i>
+          </th>
+          <th scope="col">
+          </th>
+          <th scope="col">
+            <p>Id</p>
+            <i class="fas fa-caret-down"></i>
+          </th>
+          <th scope="col">
+            <p>Nombre</p>
+            <i class="fas fa-caret-down"></i>
+          </th>
+          <th scope="col">
+            <p>Email</p>
+            <i class="fas fa-caret-down"></i>
+          </th>
+          <th scope="col">
+            <p>Fecha</p>
+            <i class="fas fa-caret-down"></i>
+          </th>
+          <th scope="col">
+            <p>Estatus</p>
+            <i class="fas fa-caret-down"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of users.results | paginate: { itemsPerPage: 12, currentPage: users.page, id:'foo', totalItems: users.total }">
+          <th scope="row"><input type="checkbox" name="" id=""></th>
+          <td><i class="fas fa-thumbtack"></i></td>
+          <td><a routerLink="{{person.person_id}}">{{person.person_id}}</a></td>
+          <td>{{person.name + ' ' + person.lastname}}</td>
+          <td>{{person.email}}</td>
+          <td>{{person.created_at |  date: 'dd/MM/yyyy'}}</td>
+          <td>
+            <i style="color: #21df4c;" class="fas fa-circle mr-2"></i>
+            <p>Active</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-pagination-container row">
+      <div class="col-lg-6">
+        <p>Mostrando 1 de {{12 * users.page}} de {{users.total}}</p>
+      </div>
+      <div class="col-lg-6">
+		    <pagination-controls class="float-right"
+        (click)="pagination()"
+        id="foo"
+        (pageChange)="users.page = $event"
+        previousLabel=""
+        nextLabel="">
+      </pagination-controls>
+      </div>
+    </div>
+  </section>
+</div>

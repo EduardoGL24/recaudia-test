@@ -1,0 +1,124 @@
+.user-main-container{
+  .user-aside-container{
+    background-color: #0072b1;
+    padding: 15px 0;
+    .info-image-container{
+      text-align: center;
+      padding-top: 10%;
+      color: #FFF;
+      margin-bottom: 15px;
+      img{
+        background-color: #FFF;
+        border-radius: 50%;
+        width: 50%;
+        margin-bottom: 5%;
+      }
+    }
+    .info-text-container{
+      text-align: center;
+      color: #8cbfce;
+      padding: 0 15px;
+      strong{
+        color: #FFF;
+      }
+      button{
+        background-color: transparent;
+        border-radius: 15px;
+        border: 2px solid #FFF;
+        width: 90%;
+        font-weight: bold;
+        color: #FFF;
+        padding: 3px 0;
+      }
+    }
+    .info-menu-container{
+      padding-top: 20%;
+      ul{
+        list-style: none;
+        li{
+          cursor: pointer;
+          color: #8cbfce;
+          font-size: 22px;
+          height: 60px;
+          padding-left: 20px;
+          padding-top: 6%;
+          &:hover{
+            color: #FFF;
+            background-color: #004667;
+          }
+          p{
+            display: inline-block;
+          }
+          i{
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+  .user-info-container{
+    background-color: #e0e0e0;
+    padding: 0;
+    .info-header-container{
+      background-color: #004667;
+      padding: 10px;
+      .header-return-container{
+        display: inline-block;
+        color: #FFF;
+        margin-right: 5%;
+      }
+      .header-path-container{
+        display: inline-block;
+        color: #8cbfce;
+        strong{
+          color: #FFF;
+        }
+      }
+    }
+    .info-padding{
+      padding: 3% 3% 0 3%;
+      .info-personal-container{
+        background-color: #FFF;
+        padding: 2%;
+        .personal-image-container{
+          width: 35%;
+          display: inline-block;
+          padding: 2% 5%;
+          vertical-align: middle;
+          img{
+            width: 90%;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+          }
+        }
+        .personal-text-container{
+          display: inline-block;
+          width: 65%;
+          vertical-align: middle;
+          .text-header-container{
+            h2{
+              display: inline-block;
+              color: gray;
+              font-size: 25px;
+              padding: 0;
+            }
+            .button-container button{
+              background-color: #004667;
+              color: #FFF;
+              width: 70px;
+              height: 40px;
+              border: none;
+              border-radius: 10px;
+            }
+          }
+          .text-info-container .row-info-container p{
+            display: inline-block;
+            margin-bottom: 15px;
+            margin-right: 5px;
+            color: #b9c3c5;
+          }
+        }
+      }
+    }
+  }
+}

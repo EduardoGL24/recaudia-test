@@ -1,1 +1,111 @@
-<p>user works!</p>
+<div class="user-main-container row">
+  <aside class="col-lg-2 user-aside-container">
+    <div class="info-image-container">
+      <img src="../../../assets/gender.png" alt="">
+      <h2>{{userInfo.name}}</h2>
+    </div>
+    <div class="info-text-container">
+      <p class="pt-2"><strong>Contacto</strong></p>
+      <p>{{userInfo.email}}</p>
+      <p>{{userInfo.phones[0]}}</p>
+      <p class="pt-2"><strong>Fecha de nacimiento</strong></p>
+      <p>{{userInfo.birthdate || '25/11/1990'}}</p>
+      <p class="pt-2"><strong>Próximo pago</strong></p>
+      <p class="mb-3">15/07/21</p>
+      <button>Active</button>
+    </div>
+    <div class="info-menu-container">
+      <ul>
+        <li>
+          <i class="fas fa-project-diagram"></i>
+          <p>Overview</p>
+        </li>
+        <li>
+          <i class="fas fa-info-circle"></i>
+          <p>Información</p>
+        </li>
+        <li>
+          <i class="fas fa-dollar-sign"></i>
+          <p>Transcacciones</p>
+        </li>
+        <li>
+          <i class="fas fa-sync-alt"></i>
+          <p>Suscripciones</p>
+        </li>
+        <li>
+          <i class="fas fa-credit-card"></i>
+          <p>Tarjetas</p>
+        </li>
+        <li>
+          <i class="far fa-comment-dots"></i>
+          <p>Interacciones</p>
+        </li>
+      </ul>
+    </div>
+    <div class="info-footer-container text-center">
+      <img class="w-75" src="../../../assets/recaudialove.png" alt="">
+    </div>
+  </aside>
+  <section class="col-lg-10 user-info-container">
+    <div class="info-header-container">
+      <div class="header-return-container">
+        <i class="fas fa-arrow-left mr-3"></i>
+        <p class="d-inline-block"><strong>Regresar</strong></p>
+      </div>
+      <div class="header-path-container">
+        <p>Persona > {{userInfo.name + ' ' + userInfo.lastname}} > <strong>Información</strong></p>
+      </div>
+    </div>
+    <div class="info-padding">
+      <div class="info-personal-container">
+        <div class="personal-image-container">
+          <img src="../../../assets/gender.png" alt="">
+        </div>
+        <div class="personal-text-container">
+          <div class="text-header-container row">
+            <h2 class="col-10">Información personal</h2>
+            <div class="button-container col-2 text-right p-0">
+              <button>
+                <i class="fas fa-cog mr-2"></i>
+                <i class="fas fa-caret-down"></i>
+              </button>
+            </div>
+          </div>
+          <div class="text-info-container">
+            <div class="row-info-container">
+              <p>Nombre: </p>
+              <p>{{userInfo.name}}</p>
+            </div>
+            <div class="row-info-container">
+              <p>Segundo nombre: </p>
+              <p>{{userInfo.middlename}}</p>
+            </div>
+            <div class="row-info-container">
+              <p>Apellidos:</p>
+              <p>{{userInfo.lastname}}</p>
+            </div>
+            <div class="row-info-container">
+              <p>Correo: </p>
+              <p>{{userInfo.email}}</p>
+            </div>
+            <div class="row-info-container">
+              <p>Teléfono: </p>
+              <p>{{userInfo.phones[0]}}</p>
+            </div>
+            <div class="row-info-container">
+              <p>Género:</p>
+              <p>{{userInfo.gender}}</p>
+            </div>
+            <div class="row-info-container">
+              <p>Fecha de nacimiento:</p>
+              <p>{{userInfo.birthdate}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-address-container">
+      
+    </div>
+  </section>
+</div>
