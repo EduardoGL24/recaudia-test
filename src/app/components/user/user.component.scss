@@ -3,6 +3,7 @@
     background-color: #0072b1;
     padding: 15px 0;
     .close-manu-container{
+      display: none;
       padding: 0 10%;
       button{
         color: #FFF;
@@ -296,6 +297,9 @@
   .user-main-container{
     .user-aside-container{
       width: 0%;
+      .close-manu-container{
+        display: block;
+      }
       .info-text-container{
         display: none;
       }
