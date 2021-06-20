@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'users', component: UserListComponent},
   {path: 'users/:userId', component: UserComponent},
+  {path: '**', component: LoginComponent},
 ];
 
 @NgModule({

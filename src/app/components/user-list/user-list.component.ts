@@ -20,6 +20,7 @@ export class UserListComponent implements OnInit{
     }
     this.apiService.getUsers(conditions).subscribe((data: any) => {
       this.users = data;
+      this.users.page = 1;
     });
   }
 

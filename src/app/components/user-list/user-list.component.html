@@ -1,6 +1,6 @@
 <div class="users-main-container">
   <section class="users-bar-container row">
-    <div class="col-lg-6">
+    <div class="col-md-6">
       <div class="bar-info-persons">
         <p>Total de personas</p><label>{{users.total}}</label>
       </div>
@@ -8,7 +8,7 @@
         <p>Nuevos</p><label>10</label>
       </div>
     </div>
-    <div class="col-lg-6 text-right">
+    <div class="col-md-6 text-md-right">
       <button><i class="fas fa-download"></i></button>
       <button>
         <i class="far fa-comment-dots mr-2"></i>
@@ -71,13 +71,13 @@
         <p>Mostrando 1 de {{12 * users.page}} de {{users.total}}</p>
       </div>
       <div class="col-lg-6">
-		    <pagination-controls class="float-right"
-        (click)="pagination()"
-        id="foo"
-        (pageChange)="users.page = $event"
-        previousLabel=""
-        nextLabel="">
-      </pagination-controls>
+		    <pagination-controls class="float-lg-right"
+          (click)="pagination()"
+          id="foo"
+          (pageChange)="users.page = $event"
+          previousLabel=""
+          nextLabel="">
+        </pagination-controls>
       </div>
     </div>
   </section>

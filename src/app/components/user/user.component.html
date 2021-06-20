@@ -1,5 +1,10 @@
 <div class="user-main-container row">
-  <aside class="col-lg-2 user-aside-container">
+  <aside id="menuResponsive" class="col-lg-2 user-aside-container">
+    <div class="close-manu-container text-right">
+      <button (click)="closeMenu()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
     <div class="info-image-container">
       <img src="../../../assets/gender.png" alt="">
       <h2>{{userInfo.name}}</h2>
@@ -49,8 +54,11 @@
   <section class="col-lg-10 user-info-container">
     <div class="info-header-container">
       <div class="header-return-container">
-        <i class="fas fa-arrow-left mr-3"></i>
-        <p class="d-inline-block"><strong>Regresar</strong></p>
+        <button (click)="openMenu()" class="mr-4">
+          <i class="fas fa-bars"></i>
+        </button>
+        <i class="fas fa-arrow-left mr-2"></i>
+        <a class="d-inline-block" routerLink="/users"><strong>Regresar</strong></a>
       </div>
       <div class="header-path-container">
         <p>Persona > {{userInfo.name + ' ' + userInfo.lastname}} > <strong>Información</strong></p>
@@ -63,8 +71,8 @@
         </div>
         <div class="personal-text-container">
           <div class="text-header-container row">
-            <h2 class="col-10">Información personal</h2>
-            <div class="button-container col-2 text-right p-0">
+            <h2 class="col-sm-10">Información personal</h2>
+            <div class="button-container col-sm-2 text-right p-0">
               <button>
                 <i class="fas fa-cog mr-2"></i>
                 <i class="fas fa-caret-down"></i>
@@ -104,8 +112,79 @@
         </div>
       </div>
     </div>
-    <div class="info-address-container">
-      
+    <div class="info-address-container row">
+      <div class="address-info-container col-lg-8">
+        <h2>Dirección</h2>
+        <div class="row-address-container">
+          <p>Tipo:</p>
+          <select name="" id="">
+            <option value="">Seleccionar</option>
+          </select>
+        </div>
+        <div class="row-address-container">
+          <p>Calle y número:</p>
+        </div>
+        <div class="row-address-container">
+          <p>Código Postal</p>
+        </div>
+        <div class="row-address-container">
+          <p>Delegación</p>
+        </div>
+        <div class="row-address-container">
+          <p>Ciudad:</p>
+        </div>
+        <div class="row-address-container">
+          <p>Estado:</p>
+        </div>
+        <div class="row-address-container">
+          <p>País:</p>
+        </div>
+        <div class="row-address-container">
+          <p>Comentario:</p>
+        </div>
+        <div class="button-address-container"><button>Agregar dirección</button></div>
+      </div>
+      <div class="address-right-container col-lg-4">
+        <div class="saved-addresses-container">
+          <h2>Direcciones guardadas</h2>
+          <div class="address-container">
+            <div class="address-text-container">
+              <p><strong>Casa</strong></p>
+              <p>Tonalá 10</p>
+              <p>Código postal</p>
+              <p>Comentario</p>
+            </div>
+            <div class="address-buttons-container">
+              <i class="fas fa-trash-alt mr-4"></i>
+              <i class="fas fa-file-signature"></i>
+            </div>
+          </div>
+          <div class="address-container">
+            <div class="address-text-container">
+              <p><strong>Oficina</strong></p>
+              <p>Tonalá 10</p>
+              <p>Código postal</p>
+              <p>Comentario</p>
+            </div>
+            <div class="address-buttons-container">
+              <i class="fas fa-trash-alt mr-4"></i>
+              <i class="fas fa-file-signature"></i>
+            </div>
+          </div>
+          <div class="address-container">
+            <div class="address-text-container">
+              <p><strong>Fiscal</strong></p>
+              <p>Tonalá 10</p>
+              <p>Código postal</p>
+              <p>Comentario</p>
+            </div>
+            <div class="address-buttons-container">
+              <i class="fas fa-trash-alt mr-4"></i>
+              <i class="fas fa-file-signature"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

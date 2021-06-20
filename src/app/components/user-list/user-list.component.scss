@@ -73,3 +73,26 @@
     }
   }
 }
+@media screen and (max-width: 974px) {
+  .users-main-container{
+    padding: 2% 1%;
+    .users-bar-container .bar-info-persons{
+      p{
+        font-size: 18px;
+      }
+    }
+    .users-table-container{
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .table-pagination-container{
+        text-align: center;
+        .col-lg-6{
+          margin-bottom: 3%;
+        }
+      }
+    }
+  }
+}

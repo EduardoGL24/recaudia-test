@@ -22,8 +22,17 @@ export class UserComponent implements OnInit {
     }
     this.apiService.getUsers(conditions).subscribe((data: any) => {
       this.userInfo = data.results[0];
-      console.log(this.userInfo)
     });
+  }
+
+  openMenu(){
+    let menu = document.getElementById('menuResponsive');
+    menu?.classList.add('menu-responsive');
+  }
+
+  closeMenu(){
+    let menu = document.getElementById('menuResponsive');
+    menu?.classList.remove('menu-responsive');
   }
 
 }

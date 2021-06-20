@@ -2,6 +2,15 @@
   .user-aside-container{
     background-color: #0072b1;
     padding: 15px 0;
+    .close-manu-container{
+      padding: 0 10%;
+      button{
+        color: #FFF;
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+      }
+    }
     .info-image-container{
       text-align: center;
       padding-top: 10%;
@@ -56,6 +65,13 @@
       }
     }
   }
+  .menu-responsive{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+  }
   .user-info-container{
     background-color: #e0e0e0;
     padding: 0;
@@ -66,6 +82,19 @@
         display: inline-block;
         color: #FFF;
         margin-right: 5%;
+        a{
+          color: #FFF;
+        }
+        button{
+          display: none;
+          background-color: transparent;
+          border: none;
+          vertical-align: middle;
+          i{
+            color: #FFF;
+            font-size: 25px;
+          }
+        }
       }
       .header-path-container{
         display: inline-block;
@@ -99,7 +128,7 @@
             h2{
               display: inline-block;
               color: gray;
-              font-size: 25px;
+              font-size: 22px;
               padding: 0;
             }
             .button-container button{
@@ -119,6 +148,195 @@
           }
         }
       }
+    }
+    .info-address-container{
+      padding: 3%;
+      .address-info-container{
+        background-color: #FFF;
+        padding: 3%;
+        h2{
+          font-size: 22px;
+          color: gray;
+          margin-bottom: 3%;
+        }
+        .row-address-container{
+          p{
+            display: inline-block;
+            width: 20%;
+            color: #b9c3c5;
+          }
+          select{
+            border-radius: 10px;
+            border: 1px solid #b9c3c5;
+            width: 25%;
+            padding: 3px 6px;
+            background-color: #FFF;
+            color: #b9c3c5;
+          }
+        }
+        .button-address-container{
+          text-align: right;
+          position: absolute;
+          bottom: 5%;
+          width: 94%;
+          button{
+            background-color: #0072b1;
+            color: #FFF;
+            font-weight: bold;
+            width: 30%;
+            border-radius: 20px;
+            border: none;
+            padding: 5px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+      .address-right-container{
+        padding: 0 0 0 3%;
+        .saved-addresses-container{
+          width: 100%;
+          background-color: #FFF;
+          h2{
+            color: gray;
+            font-size: 22px;
+            padding: 7%;
+          }
+          .address-container{
+            padding: 3% 7%;
+            &:nth-child(even){
+              background-color: #eaeaea;
+            }
+            .address-text-container{
+              display: inline-block;
+              width: 70%;
+              vertical-align: middle;
+            }
+            .address-buttons-container{
+              display: inline-block;
+              width: 30%;
+              color: #299cd3;
+              font-size: 18px;
+              vertical-align: middle;
+              i{
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1150px) {
+  .user-main-container{
+    .user-aside-container{
+      .info-image-container h2{
+        font-size: 22px;
+      }
+      .info-text-container{
+        font-size: 14px;
+      }
+      .info-menu-container ul{
+        li{
+          height: 50px;
+          font-size: 18px;
+          padding-left: 15px;
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .user-main-container{
+    .user-aside-container{
+      width: 25%;
+      display: inline-block;
+    }
+    .user-info-container{
+      width: 75%;
+      display: inline-block;
+      .info-padding .info-personal-container{
+        .personal-image-container{
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 3%;
+          img{
+            width: 50%;
+          }
+        }
+        .personal-text-container{
+          display: block;
+          width: 100%;
+        }
+      }
+      .info-address-container{
+        .address-info-container{
+          .button-address-container{
+            position: initial;
+            width: 100%;
+            bottom: initial;
+            button{
+              min-width: 50%;
+              padding: 5px 2% 10px 2%;
+            }
+          }
+        }
+        .address-right-container{
+          padding: 3% 0 0 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .user-main-container{
+    .user-aside-container{
+      width: 0%;
+      .info-text-container{
+        display: none;
+      }
+      .info-menu-container{
+        padding-top: 0%;
+      }
+    }
+    .menu-responsive{
+      width: 50%;
+    }
+    .user-info-container{
+      width: 100%;
+      .info-header-container .header-return-container button{
+        display: inline-block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .user-main-container{
+    .info-header-container{
+      font-size: 12px;
+    }
+    .info-padding .info-personal-container .personal-text-container .text-header-container{
+      h2{
+        width: 60%;
+      }
+      .button-container{
+        width: 40%;
+        display: inline-block;
+      }
+    }
+    .info-address-container .address-info-container .row-address-container select{
+      width: auto !important;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .user-main-container{
+    .info-header-container{
+      font-size: 10px;
     }
   }
 }
